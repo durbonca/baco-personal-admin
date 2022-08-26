@@ -1,5 +1,4 @@
-import React from 'react';
-import { Edit, AutocompleteInput, ReferenceInput, DateInput, FileInput, ImageField, SimpleForm, TextInput, required } from 'react-admin';
+import { FormDataConsumer, Edit, AutocompleteInput, ReferenceInput, DateInput, FileInput, BooleanInput, ImageField, SimpleForm, TextInput, required } from 'react-admin';
 
 export const PersonalEdit = (props) => {
     return (
@@ -18,10 +17,15 @@ export const PersonalEdit = (props) => {
                 <AutocompleteInput optionText='nombre' />            
             </ReferenceInput>
             <DateInput style={{width: '100%'}} source="fecha_ingreso" label="Fecha de ingreso" />
-            <DateInput style={{width: '100%'}} source="fecha_egreso" label="Fecha de desvinculación" />
             <FileInput source="file" label="Foto personal" accept="image/*" >
                 <ImageField source="file.src" title="file.title" />
             </FileInput>
+            <BooleanInput label="Desvinculado?" source="desvinculado" />
+            <FormDataConsumer>
+                {({ formData }) => (
+                formData.desvinculado && <DateInput style={{width: '100%'}} source="fecha_egreso" label="Fecha de desvinculación" validate={required()} />
+                )}
+            </FormDataConsumer>
         </SimpleForm>
     </Edit>
     )

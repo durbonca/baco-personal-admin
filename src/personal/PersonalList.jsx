@@ -1,4 +1,4 @@
-import { List, Datagrid, TextField, DateField, ImageField, TopToolbar, CreateButton, ReferenceField} from 'react-admin';
+import { List, Datagrid, TextField, DateField, ImageField, TopToolbar, CreateButton, ReferenceField, BooleanField} from 'react-admin';
 
 const ListActions = (props) => {
   return (
@@ -23,8 +23,9 @@ export const PersonalList = (props) => {
                 <ReferenceField label="Cargo" source="cargo" reference="cargo">  
                   <TextField source="nombre" />
                 </ReferenceField>
-                <DateField source="fecha_nacimiento" label="Fecha de nacimiento" locales="es-CL" />
+                <DateField source="fecha_nacimiento" label="Fecha de nacimiento" locales="es-CL"/>
                 <DateField source="fecha_ingreso" label="Fecha de ingreso" locales="es-CL" />
+                <BooleanField source="desvinculado" label="Desvinculado" />
                 <DateField source="fecha_egreso" label="Fecha de desvinculación" locales="es-CL" />
            </Datagrid>
         </List>
