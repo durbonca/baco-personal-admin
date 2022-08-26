@@ -22,6 +22,7 @@ export const PersonalList = (props) => {
                 </ReferenceField>
                 <DateField source="fecha_nacimiento" label="Fecha de nacimiento" locales="es-CL" />
                 <DateField source="fecha_ingreso" label="Fecha de ingreso" locales="es-CL" />
+                <DateField source="fecha_egreso" label="Fecha de desvinculación" locales="es-CL" />
            </Datagrid>
         </List>
   )

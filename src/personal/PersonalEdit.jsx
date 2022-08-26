@@ -14,7 +14,8 @@ export const PersonalEdit = (props) => {
             <ReferenceInput source="cargo" reference="cargo">
                 <AutocompleteInput optionText='nombre' />            
             </ReferenceInput>
-            <DateInput style={{width: '100%'}} source="fecha_ingreso" />
+            <DateInput style={{width: '100%'}} source="fecha_ingreso" label="Fecha de ingreso" />
+            <DateInput style={{width: '100%'}} source="fecha_egreso" label="Fecha de desvinculación" />
             <FileInput source="file" label="Foto personal" accept="image/*" >
                 <ImageField source="file.src" title="file.title" />
             </FileInput>

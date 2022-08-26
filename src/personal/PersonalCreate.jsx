@@ -12,7 +12,8 @@ export const PersonalCreate = (props) => (
             <ReferenceArrayInput source="cargo" reference="cargo">
                 <AutocompleteArrayInput optionText='nombre' />            
             </ReferenceArrayInput>
-            <DateInput style={{width: '100%'}} source="fecha_ingreso" />
+            <DateInput style={{width: '100%'}} source="fecha_ingreso" label="Fecha de ingreso" />
+            <DateInput style={{width: '100%'}} source="fecha_egreso" label="Fecha de desvinculación" />
             <FileInput style={{width: '100%'}} source="file" label="Imagenes" accept="image/*" >
                 <ImageField source="file.src" title="file.title" />
             </FileInput>
