@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { Admin, Resource } from "react-admin";
+import {
+  FirebaseDataProvider,
+  FirebaseAuthProvider
+} from "react-admin-firebase";
+import { firebaseConfig, options } from "./FIREBASE_CONFIG";
+import { PersonalList, PersonalCreate, PersonalEdit } from "./personal";
+import { NacionalidadList, NacionalidadCreate, NacionalidadEdit } from "./nacionalidad";
+import { CargoList, CargoCreate, CargoEdit } from "./cargo";
 
 function App() {
+
+  const dataProvider = FirebaseDataProvider(firebaseConfig, options);
+  const authProvider = FirebaseAuthProvider(firebaseConfig, options);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Admin dataProvider={dataProvider} authProvider={authProvider}>
+      <Resource name="personal" options={{ label: 'Personal' }} list={PersonalList} create={PersonalCreate} edit={PersonalEdit} />
+      <Resource name="cargo" options={{ label: 'Cargo' }} list={CargoList} create={CargoCreate} edit={CargoEdit} />
+      <Resource name="nacionalidad" options={{ label: 'País de origen' }} list={NacionalidadList} create={NacionalidadCreate} edit={NacionalidadEdit} />
+    </Admin>
   );
 }
 
