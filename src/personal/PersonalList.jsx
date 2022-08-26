@@ -1,4 +1,4 @@
-import { List, Datagrid, TextField, DateField, ImageField, TopToolbar, CreateButton, ReferenceField, ArrayField} from 'react-admin';
+import { List, Datagrid, TextField, DateField, ImageField, TopToolbar, CreateButton, ReferenceField} from 'react-admin';
 
 const ListActions = (props) => {
   return (
