@@ -17,6 +17,9 @@ export const PersonalList = (props) => {
                 <ReferenceField label="Nacionalidad" source="nacionalidad" reference="nacionalidad">  
                   <TextField source="pais" />
                 </ReferenceField>
+                <ReferenceField label="Sección" source="seccion" reference="seccion">  
+                  <TextField source="nombre" />
+                </ReferenceField>
                 <ReferenceField label="Cargo" source="cargo" reference="cargo">  
                   <TextField source="nombre" />
                 </ReferenceField>

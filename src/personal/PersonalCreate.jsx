@@ -9,6 +9,9 @@ export const PersonalCreate = (props) => (
             <ReferenceArrayInput source="nacionalidad" reference="nacionalidad">
                 <AutocompleteArrayInput optionText='pais' />            
             </ReferenceArrayInput>
+            <ReferenceArrayInput source="seccion" reference="seccion">
+                <AutocompleteArrayInput optionText='nombre' />            
+            </ReferenceArrayInput>
             <ReferenceArrayInput source="cargo" reference="cargo">
                 <AutocompleteArrayInput optionText='nombre' />            
             </ReferenceArrayInput>

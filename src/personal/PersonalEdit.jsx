@@ -11,6 +11,9 @@ export const PersonalEdit = (props) => {
             <ReferenceInput source="nacionalidad" reference="nacionalidad">
                 <AutocompleteInput optionText='pais' />            
             </ReferenceInput>
+            <ReferenceInput source="seccion" reference="seccion">
+                <AutocompleteInput optionText='nombre' />            
+            </ReferenceInput>
             <ReferenceInput source="cargo" reference="cargo">
                 <AutocompleteInput optionText='nombre' />            
             </ReferenceInput>
