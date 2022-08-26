@@ -9,7 +9,7 @@ const ListActions = (props) => {
 
 export const CargoList = (props) => {
   return (
-    <List {...props} title="Lista del personal" actions={<ListActions/>}>
+    <List {...props} title="Lista de cargos" actions={<ListActions/>}>
            <Datagrid>
                 <TextField source="nombre" label="Titulo" />
            </Datagrid>
